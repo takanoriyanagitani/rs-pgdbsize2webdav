@@ -1,0 +1,26 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "(\n            SELECT\n                datname,\n                PG_DATABASE_SIZE(datname)::BIGINT AS dbsize\n            FROM pg_database\n            ORDER BY datname\n       )",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "datname",
+        "type_info": "Name"
+      },
+      {
+        "ordinal": 1,
+        "name": "dbsize",
+        "type_info": "Int8"
+      }
+    ],
+    "parameters": {
+      "Left": []
+    },
+    "nullable": [
+      false,
+      null
+    ]
+  },
+  "hash": "4ef0ef07c9f63873d3f5c15b568e6809652ba8b03e4f3713051ea33eab7d8261"
+}

@@ -1,0 +1,65 @@
+[package]
+name = "rs-pgdbsize2webdav"
+version = "0.1.0"
+edition = "2024"
+
+[lints.rust]
+unsafe_code = "forbid"
+
+[lints.clippy]
+unwrap_used = "forbid"
+
+[dependencies.tokio]
+version = "1.45.1"
+default-features = false
+features = [
+	"macros",
+	"rt-multi-thread",
+]
+
+[dependencies.async-trait]
+version = "0.1.88"
+default-features = false
+features = [
+]
+
+[dependencies.futures-util]
+version = "0.3.31"
+default-features = false
+features = [
+	"async-await",
+	"async-await-macro",
+	"std",
+]
+
+[dependencies.hyper]
+version = "1.6.0"
+default-features = false
+features = [
+	"server",
+	"http1",
+]
+
+[dependencies.hyper-util]
+version = "0.1.14"
+default-features = false
+features = [
+	"tokio",
+]
+
+[dependencies.sqlx]
+version = "0.8.6"
+default-features = false
+features = [
+	"macros",
+	"postgres",
+	"runtime-tokio-rustls",
+]
+
+[dependencies.dav-server]
+version = "0.8.0"
+default-features = false
+features = [
+	"localfs",
+	"memfs",
+]

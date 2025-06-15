@@ -1,0 +1,22 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "(\n            SELECT PG_DATABASE_SIZE(datname)::BIGINT AS dbsize\n            FROM pg_database\n            WHERE datname=$1::TEXT\n        )",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "dbsize",
+        "type_info": "Int8"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Text"
+      ]
+    },
+    "nullable": [
+      null
+    ]
+  },
+  "hash": "082d2b187d42762875f00e89ace000cf03f3d4b49f9fd6559be754eea91b4ad4"
+}

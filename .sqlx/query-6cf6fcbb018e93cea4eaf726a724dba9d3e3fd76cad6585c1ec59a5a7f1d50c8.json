@@ -1,0 +1,20 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "(\n            SELECT datname\n            FROM pg_database\n            ORDER BY datname\n        )",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "datname",
+        "type_info": "Name"
+      }
+    ],
+    "parameters": {
+      "Left": []
+    },
+    "nullable": [
+      false
+    ]
+  },
+  "hash": "6cf6fcbb018e93cea4eaf726a724dba9d3e3fd76cad6585c1ec59a5a7f1d50c8"
+}
